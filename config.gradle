@@ -1,0 +1,54 @@
+ext {
+
+    android = [
+            compileSdkVersion: 26,
+            buildToolsVersion: "26.0.2",
+            minSdkVersion    : 14,
+            targetSdkVersion : 26,
+            versionCode      : 100,
+            versionName      : "1.0.0"
+    ]
+
+    dependVersion = [
+            androidSupportSdkVersion: "26.0.2",
+            annotationsVersion      : "23.1.1",
+            constraint              : "1.0.2",
+            annotations             : "23.1.1",
+            rxJava                  : "2.1.5",
+            rxAndroid               : "2.0.1",
+            okHttpLoggingVersion    : "3.5.0",
+            retrofitSdkVersion      : "2.3.0",
+            eventBusVersion         : "1.0.5.1",
+            multidex                : "1.0.1",
+    ]
+
+    supportDeps = [
+            appcompatv7 : "com.android.support:appcompat-v7:$dependVersion.androidSupportSdkVersion",
+            design      : "com.android.support:design:$dependVersion.androidSupportSdkVersion",
+            recyclerview: "com.android.support:recyclerview-v7:$dependVersion.androidSupportSdkVersion",
+            constraint  : "com.android.support.constraint:constraint-layout:$dependVersion.constraint",
+    ]
+
+
+    retrofit = [
+            retrofit                : "com.squareup.retrofit2:retrofit:$dependVersion.retrofitSdkVersion",
+            retrofitConverterGson   : "com.squareup.retrofit2:converter-gson:$dependVersion.retrofitSdkVersion",
+            retrofitAdapterRxjava2  : "com.squareup.retrofit2:adapter-rxjava2:$dependVersion.retrofitSdkVersion",
+            okhttp3LoggerInterceptor: "com.squareup.okhttp3:logging-interceptor:$dependVersion.okHttpLoggingVersion",
+    ]
+
+    rxJava = [
+            rxJava   : "io.reactivex.rxjava2:rxjava:$dependVersion.rxJava",
+            rxAndroid: "io.reactivex.rxjava2:rxandroid:$dependVersion.rxAndroid",
+    ]
+
+    other = [
+            multidex     : "com.android.support:multidex:$dependVersion.multidex",
+    ]
+
+    supportLibs = supportDeps.values()
+    networkLibs = retrofit.values()
+    rxJavaLibs = rxJava.values()
+    otherLibs = other.values()
+
+}
