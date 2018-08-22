@@ -1,2 +1,1 @@
-# Android-Flutter-Demo
-采用 Kotlin + MVP + Flutter 编写的 demo。
+﻿详细集成步骤请阅读 [Kotlin + MVP + Flutter ，让你可以在自己的项目中集成 Flutter 并使用](https://juejin.im/post/5b7cf52e51882542c963f0f1#heading-1)
