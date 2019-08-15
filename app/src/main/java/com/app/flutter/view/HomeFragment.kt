@@ -2,6 +2,7 @@ package com.app.flutter.view
 
 import android.app.ProgressDialog
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import com.app.flutter.model.DataModel
 import com.app.flutter.presenter.DataPresenter
@@ -20,6 +21,7 @@ class HomeFragment : FlutterFragment(), DataView {
     override fun getDataSuccess(dataJson: String) {
         dialog.dismiss()
         this.dataJson = dataJson
+
     }
 
     override fun getDataFail(failMsg: String) {
@@ -64,6 +66,7 @@ class HomeFragment : FlutterFragment(), DataView {
             run {
                 if (methodCall.method.equals("getDataJson")) {
                     val json = getDataJson()
+                    Log.e("fuck", "json: $json")
                     result.success(json)
                 } else {
                     result.notImplemented()

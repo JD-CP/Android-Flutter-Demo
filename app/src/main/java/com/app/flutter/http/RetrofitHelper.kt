@@ -7,7 +7,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitHelper {
 
-    private val BASE_URL = "http://osc.yubo725.top"
+    private val BASE_URL = "http://osc.yubo.me"
 
     private var okHttpBuilder: OkHttpClient.Builder? = null
 

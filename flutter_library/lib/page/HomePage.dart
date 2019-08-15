@@ -12,6 +12,9 @@ class HomePage extends StatefulWidget {
 }
 
 class HomePageState extends State<HomePage> {
+  /// 表示请求状态，防止频繁请求
+  var _isSuccess = false;
+
   var listData;
   ScrollController _controller = new ScrollController();
 
@@ -27,10 +30,15 @@ class HomePageState extends State<HomePage> {
   Future<Null> _getDataJson() async {
     String jsonStr;
     try {
+      if(_isSuccess) {
+        return;
+      }
       final String result = await methodChannel.invokeMethod('getDataJson');
       jsonStr = result;
+      _isSuccess = jsonStr != '';
     } on PlatformException {
       jsonStr = '';
+      _isSuccess = false;
     }
     setState(() {
       _json = jsonStr;

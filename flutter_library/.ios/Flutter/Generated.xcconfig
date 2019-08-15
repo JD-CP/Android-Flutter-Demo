@@ -1,10 +1,8 @@
 // This is a generated file; do not edit or check into version control.
-FLUTTER_ROOT=D:\ZHYS_Project\JD_Flutter\flutter
-FLUTTER_APPLICATION_PATH=D:\ZHYS_Samples\EM-Flutter\Android-Flutter-Demo\flutter_library
-FLUTTER_TARGET=lib/main.dart
-FLUTTER_BUILD_MODE=debug
+FLUTTER_ROOT=F:\flutter\flutter_sdk\flutter
+FLUTTER_APPLICATION_PATH=D:\flutter-project\Android-Flutter-Demo\flutter_library
+FLUTTER_TARGET=lib\main.dart
 FLUTTER_BUILD_DIR=build
 SYMROOT=${SOURCE_ROOT}/../build\ios
 FLUTTER_BUILD_NAME=1.0.0
 FLUTTER_BUILD_NUMBER=1
-PREVIEW_DART_2=true
